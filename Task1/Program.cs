@@ -16,7 +16,12 @@ namespace Task1
             int.TryParse(radiusString, out int radius);
 
             Console.WriteLine($"The square of the round {Program.PerformCalculation(15)}");
+
+            //Test1();
+            
             Console.ReadKey();
+
+            
         }
 
         public static decimal PerformCalculation(int r)
@@ -27,5 +32,20 @@ namespace Task1
 
             return square;
         }
+
+        public static void Test1()
+        {
+            // int uberflue? = 10;
+            int uberflue = 10;
+
+            string _Identifier = "Hello";
+
+            double \u006fldentifier = 3.5468;
+            var myVar = 0;
+            var myVariab1le = 5;
+        }
+
+       
+
     }
 }
