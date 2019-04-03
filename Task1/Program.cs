@@ -18,7 +18,8 @@ namespace Task1
              Console.WriteLine($"The square of the round {Program.PerformCalculation(15)}");*/
 
             //HT1_1();
-            HT1_2();
+            //HT1_2();
+            HT1_3();
         }
 
         public static decimal PerformCalculation(int r)
@@ -42,6 +43,13 @@ namespace Task1
             string str1 = Console.ReadLine();
             string str2 = "Hi, " + str1;
             Console.WriteLine(str2);
+
+        }
+        public static void HT1_3()
+        {
+            var v1 = 'v';
+            v1 = 'n';
+            Console.WriteLine(v1);
 
         }
     }
