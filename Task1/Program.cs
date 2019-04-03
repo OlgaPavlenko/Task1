@@ -21,7 +21,8 @@ namespace Task1
             //HT1_2();
             //HT1_3();
             //HT1_4();
-            HT1_5();
+            //HT1_5();
+            HT1_6();
 
         }
 
@@ -77,6 +78,17 @@ namespace Task1
             double s2 = Pi * radius2 * radius2;
             double s3 = s1 - s2;
             Console.WriteLine($"S1: {s1},  S2: {s2},  S3: {s3}");
+        }
+
+        public static void HT1_6()
+        {
+            Console.WriteLine("Enter the number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            int dicker = number / 10;
+            int unit = number % 10;
+
+            Console.WriteLine($"The nuber consist of {dicker} dickers and {unit} units");
         }
     }
 }
