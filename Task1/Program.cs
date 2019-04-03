@@ -19,7 +19,9 @@ namespace Task1
 
             //HT1_1();
             //HT1_2();
-            HT1_3();
+            //HT1_3();
+            HT1_4();
+
         }
 
         public static decimal PerformCalculation(int r)
@@ -51,6 +53,14 @@ namespace Task1
             v1 = 'n';
             Console.WriteLine(v1);
 
+        }
+
+        public static void HT1_4()
+        {
+            Console.WriteLine("Enter the lenght of square: ");
+            int lengthSquare = Convert.ToInt32(Console.ReadLine());
+            double p = 4 * lengthSquare;
+            Console.WriteLine($"Perimetr is: {p} ");
         }
     }
 }
