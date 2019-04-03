@@ -10,13 +10,14 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Add Radius");
+           /* Console.WriteLine("Add Radius");
 
             string radiusString = Console.ReadLine();
             int.TryParse(radiusString, out int radius);
 
-            Console.WriteLine($"The square of the round {Program.PerformCalculation(15)}");
-            Console.ReadKey();
+            Console.WriteLine($"The square of the round {Program.PerformCalculation(15)}");*/
+
+            HT1();
         }
 
         public static decimal PerformCalculation(int r)
@@ -26,6 +27,12 @@ namespace Task1
             decimal square = Pi * r * r;
 
             return square;
+        }
+
+        public static void HT1_1()
+        {
+            int x1 = 5;
+            Console.WriteLine(x1);
         }
     }
 }
