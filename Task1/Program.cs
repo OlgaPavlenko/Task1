@@ -20,7 +20,8 @@ namespace Task1
             //HT1_1();
             //HT1_2();
             //HT1_3();
-            HT1_4();
+            //HT1_4();
+            HT1_5();
 
         }
 
@@ -61,6 +62,21 @@ namespace Task1
             int lengthSquare = Convert.ToInt32(Console.ReadLine());
             double p = 4 * lengthSquare;
             Console.WriteLine($"Perimetr is: {p} ");
+        }
+
+        public static void HT1_5()
+        {
+            Console.WriteLine("Enter the radius of first circle: ");
+            double radius1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter the radius of second circle: ");
+            double radius2 = Convert.ToDouble(Console.ReadLine());
+
+            const double Pi = 3.14;
+            double s1 = Pi * radius1 * radius1;
+            double s2 = Pi * radius2 * radius2;
+            double s3 = s1 - s2;
+            Console.WriteLine($"S1: {s1},  S2: {s2},  S3: {s3}");
         }
     }
 }
