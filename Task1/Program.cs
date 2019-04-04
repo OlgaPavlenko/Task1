@@ -22,7 +22,8 @@ namespace Task1
             //HT1_3();
             //HT1_4();
             //HT1_5();
-            HT1_6();
+            //HT1_6();
+            HT1_7();
 
         }
 
@@ -89,6 +90,14 @@ namespace Task1
             int unit = number % 10;
 
             Console.WriteLine($"The nuber consist of {dicker} dickers and {unit} units");
+        }
+
+        public static void HT1_7()
+        {
+            int number1 = 213546;
+            int number2 = 22230;
+            long number3 = number1 + number2;
+            Console.WriteLine(number3);
         }
     }
 }
