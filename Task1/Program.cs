@@ -23,7 +23,8 @@ namespace Task1
             //HT1_4();
             //HT1_5();
             //HT1_6();
-            HT1_7();
+            //HT1_7();
+            HT1_8();
 
         }
 
@@ -97,6 +98,14 @@ namespace Task1
             int number1 = 213546;
             int number2 = 22230;
             long number3 = number1 + number2;
+            Console.WriteLine(number3);
+        }
+
+        public static void HT1_8()
+        {
+            long number1 = 213546;
+            long number2 = 22230;
+            byte number3 = (byte)(number1 * number2);
             Console.WriteLine(number3);
         }
     }
