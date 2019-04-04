@@ -24,7 +24,9 @@ namespace Task1
             //HT1_5();
             //HT1_6();
             //HT1_7();
-            HT1_8();
+            //HT1_8();
+            //HT1_9a();
+            HT1_9b();
 
         }
 
@@ -107,6 +109,31 @@ namespace Task1
             long number2 = 22230;
             byte number3 = (byte)(number1 * number2);
             Console.WriteLine(number3);
+        }
+
+        public static void HT1_9a()
+        {
+            int a = 3;
+            int b = 5;
+            Console.WriteLine($"{a}, {b}");
+            a = a + b;
+            b = a - b;
+            a = a - b;
+
+            Console.WriteLine($"{a}, {b}");
+        }
+
+        public static void HT1_9b()
+        {
+            int a = 3;
+            int b = 5;
+            int c = a + b;
+            Console.WriteLine($"{a}, {b}");
+
+            a = c - a;
+            b = c - a;
+
+            Console.WriteLine($"{a}, {b}");
         }
     }
 }
