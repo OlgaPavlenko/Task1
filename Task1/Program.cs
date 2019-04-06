@@ -20,7 +20,8 @@ namespace Task1
             //Task1();
             //Task2();
             //Task3();
-            Task4();
+            //Task4();
+            Task5();
             Console.ReadKey();
         }
 
@@ -89,5 +90,33 @@ namespace Task1
             Console.WriteLine(x);
         }
 
+        public static void Task5()
+        {
+            Console.WriteLine("Enter first number");
+            int firstNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            int secondNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("What operation do you want to do? /n If you want multiply enter * /n If you want add enter + /n If you want devide enter / /n If you want subtract enter - /n");
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "+":
+                    Console.WriteLine(firstNumber + secondNumber);
+                    break;
+                case "-":
+                    Console.WriteLine(firstNumber - secondNumber);
+                    break;
+                case "*":
+                    Console.WriteLine(firstNumber * secondNumber);
+                    break;
+                case "/":
+                    if (secondNumber == 0)
+                        Console.WriteLine("You can't devide to 0!!!");
+                    else
+                        Console.WriteLine(firstNumber / secondNumber);
+                    break;
+            }
+        }
     }
 }
