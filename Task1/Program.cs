@@ -10,22 +10,32 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Add Radius");
+           /* Console.WriteLine("Add Radius");
 
             string radiusString = Console.ReadLine();
             int.TryParse(radiusString, out int radius);
 
-            Console.WriteLine($"The square of the round {Program.PerformCalculation(15)}");
+            Console.WriteLine($"The square of the round {Program.PerformCalculation(15)}");*/
+
+            Task1();
             Console.ReadKey();
         }
 
-        public static decimal PerformCalculation(int r)
-        {
-            const decimal Pi = 3.14m;
+        /* public static decimal PerformCalculation(int r)
+         {
+             const decimal Pi = 3.14m;
 
-            decimal square = Pi * r * r;
+             decimal square = Pi * r * r;
 
-            return square;
-        }
+             return square;
+         }  */
+
+        public static void Task1()
+            {
+               
+                int sec = 8000;
+                int hour = sec / 3600;
+                Console.WriteLine(hour);
+            }
     }
 }
