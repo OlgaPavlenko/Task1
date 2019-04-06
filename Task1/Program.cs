@@ -23,7 +23,8 @@ namespace Task1
             //Task4();
             //Task5();
             //Task6();
-            Task7();
+            //Task7();
+            Task8();
             Console.ReadKey();
         }
 
@@ -181,5 +182,43 @@ namespace Task1
                     break;
             }
         }
+
+        public static void Task8()
+        {
+            Console.WriteLine("Enter long service: ");
+            double longService = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter salary: ");
+            int salary = Convert.ToInt32(Console.ReadLine());
+            if (longService > 0 && longService < 5)
+            {
+                double premium = salary * 0.1;
+                Console.WriteLine($"Salary is: {salary} long service is: {longService} premium is: {premium} total: {salary + premium}");
+            }
+            if (longService > 4 && longService < 10)
+            {
+                double premium = salary * 0.15;
+                Console.WriteLine($"Salary is: {salary} long service is: {longService} premium is: {premium} total: {salary + premium}");
+            }
+                if (longService >9  && longService < 16)
+                {
+                    double premium = salary * 0.25;
+                Console.WriteLine($"Salary is: {salary} long service is: {longService} premium is: {premium} total: {salary + premium}");
+            }
+            if (longService > 15 && longService < 21)
+            {
+                double premium = salary * 0.35;
+                Console.WriteLine($"Salary is: {salary} long service is: {longService} premium is: {premium} total: {salary + premium}");
+            }
+            if (longService > 20 && longService < 26)
+            {
+                double premium = salary * 0.45;
+                Console.WriteLine($"Salary is: {salary} long service is: {longService} premium is: {premium} total: {salary + premium}");
+            }
+            if (longService > 25)
+            {
+                double premium = salary * 0.5;
+                Console.WriteLine($"Salary is: {salary} long service is: {longService} premium is: {premium} total: {salary + premium}");
+            }
+         }
     }
 }
