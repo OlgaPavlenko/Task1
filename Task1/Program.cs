@@ -22,7 +22,8 @@ namespace Task1
             //Task3();
             //Task4();
             //Task5();
-            Task6();
+            //Task6();
+            Task7();
             Console.ReadKey();
         }
 
@@ -36,12 +37,12 @@ namespace Task1
          }  */
 
         public static void Task1()
-            {
-               
-                int sec = 8000;
-                int hour = sec / 3600;
-                Console.WriteLine(hour);
-            }
+        {
+
+            int sec = 8000;
+            int hour = sec / 3600;
+            Console.WriteLine(hour);
+        }
         public static void Task2()
         {
             int a = 12;
@@ -119,13 +120,13 @@ namespace Task1
                     break;
             }
         }
-            public static void Task6()
-            {
+        public static void Task6()
+        {
             Console.WriteLine("Enter number between 0...100");
             int number = Convert.ToInt32(Console.ReadLine());
             if (number < 0 || number > 100)
                 Console.WriteLine("Error! Enter number in correct range");
-            if (number > 0 && number <=14)
+            if (number > 0 && number <= 14)
                 Console.WriteLine("number located between [0 - 14]");
             if (number > 15 && number <= 35)
                 Console.WriteLine("number located between [15 - 35]");
@@ -136,6 +137,49 @@ namespace Task1
             if (number > 51 && number <= 100)
                 Console.WriteLine("number located between [50 - 100]");
         }
-        
+
+        public static void Task7()
+        {
+            Console.WriteLine("What word do you want to translate? зима, весна, лето, осень, снег, дождь, солнце, тучи, ветер, гроза");
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "зима":
+                    Console.WriteLine("зима - winter");
+                    break;
+                case "весна":
+                    Console.WriteLine("весна - spring");
+                    break;
+                case "лето":
+                    Console.WriteLine("лето - summer");
+                    break;
+                case "осень":
+                    Console.WriteLine("осень - autumn");
+                    break;
+                case "снег":
+                    Console.WriteLine("снег - snow");
+                    break;
+                case "дождь":
+                    Console.WriteLine("дождь - rain");
+                    break;
+                case "солнце":
+                    Console.WriteLine("солнце - sun");
+                    break;
+                case "тучи":
+                    Console.WriteLine("тучи - clouds");
+                    break;
+                case "ветер":
+                    Console.WriteLine("ветер - wind");
+                    break;
+                case "гроза":
+                    Console.WriteLine("гроза - thunderstorm");
+                    break;
+
+                default:
+                    Console.WriteLine("you shoud enter excisting word!");
+                    break;
+            }
+        }
     }
 }
