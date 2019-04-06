@@ -21,7 +21,8 @@ namespace Task1
             //Task2();
             //Task3();
             //Task4();
-            Task5();
+            //Task5();
+            Task6();
             Console.ReadKey();
         }
 
@@ -118,5 +119,23 @@ namespace Task1
                     break;
             }
         }
+            public static void Task6()
+            {
+            Console.WriteLine("Enter number between 0...100");
+            int number = Convert.ToInt32(Console.ReadLine());
+            if (number < 0 || number > 100)
+                Console.WriteLine("Error! Enter number in correct range");
+            if (number > 0 && number <=14)
+                Console.WriteLine("number located between [0 - 14]");
+            if (number > 15 && number <= 35)
+                Console.WriteLine("number located between [15 - 35]");
+            if (number > 36 && number < 50)
+                Console.WriteLine("number located between [36 - 50]");
+            if (number == 50)
+                Console.WriteLine("number located between [36 - 50] and [50 - 100]");
+            if (number > 51 && number <= 100)
+                Console.WriteLine("number located between [50 - 100]");
+        }
+        
     }
 }
