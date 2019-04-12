@@ -24,7 +24,12 @@ namespace Task1
             //Task5();
             //Task6();
             //Task7();
-            Task8();
+            //Task8();
+            //Task9();
+            //BetweenAB();
+            //NaturalNumber();
+            //Extent();
+            MaxNumber();
             Console.ReadKey();
         }
 
@@ -199,9 +204,9 @@ namespace Task1
                 double premium = salary * 0.15;
                 Console.WriteLine($"Salary is: {salary} long service is: {longService} premium is: {premium} total: {salary + premium}");
             }
-                if (longService >9  && longService < 16)
-                {
-                    double premium = salary * 0.25;
+            if (longService > 9 && longService < 16)
+            {
+                double premium = salary * 0.25;
                 Console.WriteLine($"Salary is: {salary} long service is: {longService} premium is: {premium} total: {salary + premium}");
             }
             if (longService > 15 && longService < 21)
@@ -219,6 +224,58 @@ namespace Task1
                 double premium = salary * 0.5;
                 Console.WriteLine($"Salary is: {salary} long service is: {longService} premium is: {premium} total: {salary + premium}");
             }
-         }
-    }
-}
+        }
+
+        public static void Task9()
+        {
+            while (true)
+            {
+                Console.WriteLine("Enter first number");
+                if (!Int32.TryParse(Console.ReadLine(), out int firstNumber))
+                {
+                    Console.WriteLine("yOU ENTERED INCORRECt value!");
+                    continue;
+                }
+                
+                Console.WriteLine("Enter second number");
+                if (!Int32.TryParse(Console.ReadLine(), out int secondNumber))
+                {
+                    Console.WriteLine("yOU ENTERED INCORRECt value!");
+                    continue;
+                }
+
+                Console.WriteLine("What operation do you want to do? /n If you want multiply enter * /n If you want add enter + /n If you want devide enter / /n If you want subtract enter - /n");
+                string choice = Console.ReadLine();
+
+                switch (choice)
+                {
+                    case "+":
+                        Console.WriteLine(firstNumber + secondNumber);
+                        break;
+                    case "-":
+                        Console.WriteLine(firstNumber - secondNumber);
+                        break;
+                    case "*":
+                        Console.WriteLine(firstNumber * secondNumber);
+                        break;
+                    case "/":
+                        if (secondNumber == 0)
+                            Console.WriteLine("You can't devide to 0!!!");
+                        else
+                            Console.WriteLine(firstNumber / secondNumber);
+                        break;
+                    default:
+                        Console.WriteLine("Entered incorrect operation!");
+                        continue;
+                }
+                Console.WriteLine("If you want break enter E");
+                string choiseExit = Console.ReadLine();
+                if (choiseExit == "E")
+                {
+                    break;
+                }
+
+            }
+        }
+
+       
