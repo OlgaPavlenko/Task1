@@ -29,7 +29,15 @@ namespace Task1
             //BetweenAB();
             //NaturalNumber();
             //Extent();
-            MaxNumber();
+            //MaxNumber();
+            //Factorial();
+            //WorkWithNumber();
+            //Delivery();
+            //Average();
+            //WithoutMulti();
+            //Squares();
+            //Reverse();
+            //NumberParse();
             Console.ReadKey();
         }
 
@@ -236,7 +244,7 @@ namespace Task1
                     Console.WriteLine("yOU ENTERED INCORRECt value!");
                     continue;
                 }
-                
+
                 Console.WriteLine("Enter second number");
                 if (!Int32.TryParse(Console.ReadLine(), out int secondNumber))
                 {
@@ -278,4 +286,280 @@ namespace Task1
             }
         }
 
-       
+        public static void BetweenAB()
+        {
+            Console.WriteLine("Enter number A:");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter number B, B > A:");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int sum = 0;
+            if (a < b)
+            {
+                for (int i = ++a; i < b; i++)
+                {
+                    sum += i;
+                }
+                Console.WriteLine($"The sum of numbers between A and B is: {sum}");
+
+                for (int i = ++a; i < b; i++)
+                {
+                    if (i % 2 != 0)
+                    {
+                        Console.WriteLine($"Odds: {i}");
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("B shoud be more than A!");
+            }
+        }
+
+        public static void NaturalNumber()
+        {
+            Console.WriteLine("Enter naturale number:");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int forEvenNumber = 0;
+            int count = 0;
+            while (number > 0)
+            {
+                forEvenNumber = number % 10;
+                if (forEvenNumber % 2 == 0)
+                {
+                    count++;
+                }
+                number /= 10;
+            }
+            Console.WriteLine($"The number of even number is: {count}");
+        }
+
+        public static void Extent()
+        {
+            Console.WriteLine("Enter naturale number:");
+            double number = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter extent of number:");
+            int extent = Convert.ToInt32(Console.ReadLine());
+            double res = 1;
+            if (extent > 0)
+            {
+                for (int i = 1; i <= extent; i++)
+                {
+                    res *= number;
+                }
+            }
+            else if (extent < 0)
+            {
+                res = 1 / (number * number);
+            }
+            Console.WriteLine(res);
+        }
+
+
+        static void Factorial()
+        {
+            Console.WriteLine("Enter a number for calculate factorial:");
+            int fakt0rial = Convert.ToInt32(Console.ReadLine());
+
+            if (fakt0rial == 0)
+            {
+                Console.WriteLine("Factorial 0 = 1");
+            }
+            else
+            {
+                for (int i = fakt0rial - 1; i > 1; i--)
+                {
+                    fakt0rial *= i;
+                }
+                Console.WriteLine($"Factorial {fakt0rial}");
+            }
+            Console.Read();
+        }
+
+        static void WorkWithNumber()
+        {
+            Console.WriteLine("Enter the number you want to check: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int[] numbersForDevide = { 2, 5, 3, 6, 9 };
+            int counter = 0;
+            bool check = true;
+            if (number > 0)
+            {
+                Console.WriteLine("number is positive");
+
+                for (int i = 1; i <= number; i++)
+                {
+                    if (number % i == 0)
+                    {
+                        counter++;
+                    }
+                    if (counter > 2)
+                    {
+                        check = false;
+                        continue;
+                    }
+                }
+                if (check == true)
+                {
+                    Console.WriteLine("Number is prime");
+                }
+                else
+                {
+                    Console.WriteLine("Number isn't prime");
+                }
+                for (int k = 0; k < numbersForDevide.Length; k++)
+                {
+                    if (number % numbersForDevide[k] == 0)
+                    {
+                        Console.WriteLine($"Number number is devided by: {numbersForDevide[k]}");
+                    }
+                }
+            }
+            if (number < 0)
+            {
+                Console.WriteLine("number is negative");
+            }
+            if (number == 0)
+            {
+                Console.WriteLine("You entered 0");
+            }
+
+        }
+
+        public static void Delivery()
+        {
+            Console.WriteLine("Enter number of clients you want to deliver goods: ");
+            int numberOfClients = Convert.ToInt32(Console.ReadLine());
+            if (numberOfClients <= 0)
+            {
+                Console.WriteLine("you haven't clients");
+                return;
+            }
+            int i = 1;
+            long fNumberOfClients = 1;
+            do
+            {
+                fNumberOfClients *= i;
+                i++;
+            }
+            while (i <= numberOfClients);
+            Console.WriteLine($"There are {fNumberOfClients} possible routes");
+        }
+
+        public static void Average()
+        {
+            Console.WriteLine("Enter number min number of range: ");
+            int minNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter number max number of range: ");
+            int maxNumber = Convert.ToInt32(Console.ReadLine());
+            int counter = 0;
+            int sum = 0;
+            double avarage = 0;
+
+            for (int i = minNumber; i <= maxNumber; i++)
+            {
+                sum += i;
+                counter++;
+            }
+            avarage = sum / counter;
+            Console.WriteLine($"Avarage of range is: {avarage}");
+        }
+
+        public static void WithoutMulti()
+        {
+            Console.WriteLine("Enter first number: ");
+            int firstNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number: ");
+            int secondNumber = Convert.ToInt32(Console.ReadLine());
+            int multi = 0;
+
+            if (secondNumber < 0)
+            {
+                secondNumber = -secondNumber;
+
+                for (int i = 0; i < secondNumber; i++)
+                {
+                    multi += firstNumber;
+                }
+                Console.WriteLine(-multi);
+            }
+            else
+            {
+                for (int i = 0; i < secondNumber; i++)
+                {
+                    multi += firstNumber;
+                }
+                Console.WriteLine(multi);
+            }
+        }
+
+        public static void Squares()
+        {
+            Console.WriteLine("Enter the number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int square = 1;
+
+            for (int i = 1; i < number; i++)
+            {
+                square = i * i;
+                if (square <= number)
+                {
+                    Console.WriteLine(square);
+                }
+            }
+        }
+
+        public static void Reverse()
+        {
+            Console.WriteLine("Enter the number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int renumber = 0;
+
+            while (number > 0)
+            {
+                renumber *= 10;
+                renumber += number % 10;
+                number /= 10;
+            }
+            Console.Write($"New number is: {renumber} \n");
+        }
+
+        public static void NumberParse()
+        {
+            Console.WriteLine("Enter the number: ");
+            string stringNumber = Console.ReadLine();
+            int number = Convert.ToInt32(stringNumber);
+            int[] numbers = new int[stringNumber.Length];
+            int renumber = 0;
+
+            for (int i = 0; i < stringNumber.Length; i++)
+            {
+                renumber = number % 10;
+                number /= 10;
+                numbers[i] = renumber;
+            }
+            for (int i = numbers.Length - 1; i >= 0; i--)
+            {
+                Console.WriteLine(numbers[i]);
+            }
+        }
+
+        public static void MaxNumber()
+        {
+            Console.WriteLine("Enter the number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int renumber = 0;
+            int max = 0;
+            while (number > 0)
+            {
+                renumber = number % 10;
+                number /= 10;
+                if (max < renumber)
+                {
+                    max = renumber;
+                }
+            }
+            Console.WriteLine($"Max number is: {max}");
+        }
+
+    }
+}
