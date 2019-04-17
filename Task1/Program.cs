@@ -17,7 +17,8 @@ namespace Task1
 
             //Console.WriteLine($"The square of the round {Program.PerformCalculation(15)}");
             //UnpackingArray();
-            Goods();
+            //Goods();
+            PerfectNumbers();
             Console.ReadKey();
         }
 
@@ -100,6 +101,27 @@ namespace Task1
                 }
             }
             Console.WriteLine($"Amount to pay: {sum}");
+        }
+
+        public static void PerfectNumbers()
+        {
+            int sum = 0;
+            for (int i = 2; i <= 1000; i++)
+            {
+                sum = 0;
+                for (int j = 1; j < i - 1; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        sum += j;
+                    }
+                }
+                if (sum == i)
+                {
+                    Console.WriteLine($"{sum} is perfect number!");
+                    continue;
+                }
+            }
         }
     }
 }
