@@ -18,7 +18,8 @@ namespace Task1
             //Console.WriteLine($"The square of the round {Program.PerformCalculation(15)}");
             //UnpackingArray();
             //Goods();
-            PerfectNumbers();
+            //PerfectNumbers();
+            Crypt();
             Console.ReadKey();
         }
 
@@ -123,6 +124,38 @@ namespace Task1
                 }
             }
         }
+
+        public static void Crypt()
+        {
+            char[] encryptChars = new char[10] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+            char[] cipher = new char[11] { ',', '+', '/', '.', '^', '@', '"', '!', '%', '#', '$' };
+
+            Console.WriteLine("Enter your text: ");
+            string text = Console.ReadLine();
+            char[] res = new char[text.Length];
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                for (int j = 0; j < encryptChars.Length; j++)
+                {
+                    if (text[i] == encryptChars[j])
+                    {
+                        res[i] = cipher[j];
+                        break;
+                    }
+                }
+                if (res[i] == '\x0000')
+                {
+                    res[i] = cipher[10];
+                }
+            }
+            foreach (var item in res)
+            {
+                Console.Write(item);
+            }
+        }
+         
     }
 }
+
 
