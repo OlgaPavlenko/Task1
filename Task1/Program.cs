@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task1.Inher;
 
-namespace Task1
+namespace Task1.Inher
 {
     class Program
     {
         static void Main()
         {
-            Worker worker = new Worker("Ivan", 25, 1000);
-            Worker worker2 = new Worker("Vasya", 26, 2000);
+            Employee worker = new Employee("Ivan", 25, 1000);
+            Employee worker2 = new Employee("Vasya", 26, 2000);
 
             Console.WriteLine(worker.Age + worker2.Age);
             Console.WriteLine(worker.Salary + worker2.Salary);

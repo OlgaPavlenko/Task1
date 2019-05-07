@@ -4,13 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task1
+namespace Task1.Inher
 {
-    class Worker
+    class User
     {
-        public string Name { get; set; }
+        private string name;
         private int age;
-        public decimal Salary { get; set; }
+
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
 
         public int Age
         {
@@ -20,18 +31,14 @@ namespace Task1
             }
             set
             {
-                if (value >= 0 && value <= 100)
-                {
-                    age = value;
-                }
+                age = value;
             }
         }
 
-        public Worker(string name, int age, decimal salary)
+        public User(string name, int age)
         {
             Name = name;
             Age = age;
-            Salary = salary;
         }
     }
 }
