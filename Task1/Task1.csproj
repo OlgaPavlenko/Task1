@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Inher\Driver.cs" />
     <Compile Include="Inher\Employee.cs" />
     <Compile Include="Inher\Student.cs" />
     <Compile Include="Inher\User.cs" />
