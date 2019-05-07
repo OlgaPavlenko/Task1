@@ -35,5 +35,11 @@ namespace Task1.Inher
                 course = value;
             }
         }
+        public Student(int stipendiya, string course, string name, int age)
+           : base(name, age)
+        {
+            Stipendiya = stipendiya;
+            Course = course;
+        }
     }
 }
