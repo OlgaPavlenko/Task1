@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Inher\Employee.cs" />
+    <Compile Include="Inher\Student.cs" />
     <Compile Include="Inher\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
