@@ -8,24 +8,15 @@ namespace Task1
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Add Radius");
+            Worker worker = new Worker("Ivan", 25, 1000);
+            Worker worker2 = new Worker("Vasya", 26, 2000);
 
-            string radiusString = Console.ReadLine();
-            int.TryParse(radiusString, out int radius);
-
-            Console.WriteLine($"The square of the round {Program.PerformCalculation(15)}");
-            Console.ReadKey();
+            Console.WriteLine(worker.age + worker2.age);
+            Console.WriteLine(worker.salary + worker2.salary);
         }
 
-        public static decimal PerformCalculation(int r)
-        {
-            const decimal Pi = 3.14m;
-
-            decimal square = Pi * r * r;
-
-            return square;
-        }
+        
     }
 }
