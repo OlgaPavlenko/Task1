@@ -13,8 +13,8 @@ namespace Task1
             Worker worker = new Worker("Ivan", 25, 1000);
             Worker worker2 = new Worker("Vasya", 26, 2000);
 
-            Console.WriteLine(worker.age + worker2.age);
-            Console.WriteLine(worker.salary + worker2.salary);
+            Console.WriteLine(worker.Age + worker2.Age);
+            Console.WriteLine(worker.Salary + worker2.Salary);
         }
 
         
