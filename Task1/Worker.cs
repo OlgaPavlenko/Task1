@@ -9,8 +9,23 @@ namespace Task1
     class Worker
     {
         public string Name { get; set; }
-        public int Age { get; set; }
+        private int age;
         public decimal Salary { get; set; }
+
+        public int Age
+        {
+            get
+            {
+                    return age;
+            }
+            set
+            {
+                if (age > 0 || age < 100)
+                {
+                    age = value;
+                }
+            }
+        }
 
         public Worker(string name, int age, decimal salary)
         {
